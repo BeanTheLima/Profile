@@ -1,11 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Set current year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // 2. Navbar Scroll Effect
     const navbar = document.getElementById('navbar');
-    let lastScroll = 0;
-    
     let ticking = false;
     window.addEventListener('scroll', () => {
         if (!ticking) {
@@ -16,44 +12,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else {
                     navbar.classList.remove('scrolled');
                 }
-                lastScroll = currentScroll;
                 ticking = false;
             });
             ticking = true;
         }
     });
 
-    // 3. Scroll Reveal Animation
     const revealElements = document.querySelectorAll('.reveal');
-    
-    const revealCallback = (entries, observer) => {
+    const revealCallback = (entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
             }
         });
     };
-
     const revealObserver = new IntersectionObserver(revealCallback, {
         root: null,
         rootMargin: '0px 0px -100px 0px',
         threshold: 0.1
     });
-    
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // 4. Smooth Scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 const navHeight = navbar.offsetHeight;
                 const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight;
-                
                 window.scrollTo({
                     top: targetPosition,
                     behavior: 'smooth'
@@ -62,17 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Counter Animation
     const stats = document.querySelectorAll('.stat-number[data-target]');
     let hasCounted = false;
-
     const startCounter = () => {
         stats.forEach(stat => {
             const target = +stat.getAttribute('data-target');
             const duration = 2000;
             const increment = target / (duration / 16);
             let current = 0;
-
             const updateCounter = () => {
                 current += increment;
                 if (current < target) {
@@ -85,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
             updateCounter();
         });
     };
-
     const statsSection = document.querySelector('.stats');
     if (statsSection) {
         const statsObserver = new IntersectionObserver((entries) => {
@@ -99,9 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         statsObserver.observe(statsSection);
     }
 
-    // 6. Mouse Glow Effect
     const glow = document.getElementById('mouse-glow');
-    
     window.addEventListener('mousemove', (e) => {
         if (!ticking) {
             window.requestAnimationFrame(() => {
@@ -113,8 +95,39 @@ document.addEventListener('DOMContentLoaded', () => {
             ticking = true;
         }
     });
-
     document.addEventListener('mouseleave', () => {
         glow.style.opacity = '0';
+    });
+
+    const themeToggle = document.getElementById('theme-toggle');
+    const moonIcon = document.querySelector('.moon-icon');
+    const sunIcon = document.querySelector('.sun-icon');
+    
+    themeToggle.addEventListener('click', () => {
+        document.documentElement.classList.toggle('light');
+        if (document.documentElement.classList.contains('light')) {
+            moonIcon.classList.add('hidden');
+            sunIcon.classList.remove('hidden');
+        } else {
+            moonIcon.classList.remove('hidden');
+            sunIcon.classList.add('hidden');
+        }
+    });
+
+    const copyItems = document.querySelectorAll('[data-copy]');
+    const toast = document.getElementById('toast');
+    let toastTimeout;
+    
+    copyItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const textToCopy = item.getAttribute('data-copy');
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                toast.classList.add('show');
+                clearTimeout(toastTimeout);
+                toastTimeout = setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 2000);
+            });
+        });
     });
 });

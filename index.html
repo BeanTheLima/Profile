@@ -9,7 +9,7 @@
     <meta property="og:title" content="BreakTheBean | Portfolio">
     <meta property="og:description" content="Developer, Minecraft Server Owner, UI Designer">
     <meta property="og:type" content="website">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238b5cf6' stroke-width='2'><path d='M18 8h1a4 4 0 0 1 0 8h-1'></path><path d='M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z'></path><line x1='6' y1='1' x2='6' y2='4'></line><line x1='10' y1='1' x2='10' y2='4'></line><line x1='14' y1='1' x2='14' y2='4'></line></svg>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -23,13 +23,15 @@
         <div class="noise-overlay"></div>
         <div class="grid-overlay"></div>
     </div>
-
-    <!-- Mouse Glow -->
     <div id="mouse-glow"></div>
+    <div id="toast" class="toast">Copied to clipboard!</div>
 
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">☕ BreakTheBean</a>
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                BreakTheBean
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -39,13 +41,11 @@
             </ul>
             <div class="nav-actions">
                 <button id="theme-toggle" aria-label="Toggle Dark Mode">
-                    <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg class="sun-icon hidden" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
                 </button>
-                <a href="https://github.com/BreakTheBean" target="_blank" aria-label="GitHub">
+                <a href="https://github.com/BeanTheLima/" target="_blank" aria-label="GitHub">
                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-                <a href="#" target="_blank" aria-label="Discord">
-                     <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M19.7 4.5a18.3 18.3 0 00-4.6-1.4.1.1 0 00-.1.1c-.2.4-.4.9-.6 1.3a17 17 0 00-5 0c-.2-.4-.4-.9-.6-1.3a.1.1 0 00-.1-.1 18.3 18.3 0 00-4.6 1.4.1.1 0 000 .1C.8 10 0 15.3 1 20.5a.1.1 0 00.1.1 18 18 0 005.5 1.7.1.1 0 00.1-.1c.4-.6.8-1.2 1.1-1.8a.1.1 0 00-.1-.1 12 12 0 01-1.7-.8.1.1 0 010-.1c.1-.1.2-.2.4-.3a.1.1 0 01.1 0 13 13 0 0010.5 0 .1.1 0 01.1 0c.1.1.2.2.4.3a.1.1 0 010 .1 12 12 0 01-1.7.8.1.1 0 00-.1.1c.3.6.7 1.2 1.1 1.8a.1.1 0 00.1.1 18 18 0 005.5-1.7.1.1 0 00.1-.1c1-5.3.3-10.6-3.2-15.9a.1.1 0 00-.1-.1zM8.5 16.5c-1.2 0-2.2-1.1-2.2-2.5s1-2.5 2.2-2.5 2.2 1.1 2.2 2.5-1 2.5-2.2 2.5zm7 0c-1.2 0-2.2-1.1-2.2-2.5s1-2.5 2.2-2.5 2.2 1.1 2.2 2.5-1 2.5-2.2 2.5z"></path></svg>
                 </a>
             </div>
             <button class="mobile-menu-btn" aria-label="Menu">
@@ -58,12 +58,12 @@
         <section id="home" class="hero section-padding">
             <div class="container hero-container">
                 <div class="hero-content reveal fade-up">
-                    <p class="greeting">Hello <span class="wave">👋</span></p>
-                    <h1 class="hero-title">I'm <span class="highlight">BreakTheBean</span><br><span class="real-name">(Huỳnh Thìn)</span></h1>
-                    <p class="hero-desc">
-                        Minecraft Developer, JavaScript Developer,<br>
-                        Server Owner, UI Designer.
+                    <p class="greeting">
+                        Hello 
+                        <svg class="wave" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
                     </p>
+                    <h1 class="hero-title">I'm <span class="highlight">BreakTheBean</span><br><span class="real-name">(Huỳnh Thìn)</span></h1>
+                    <p class="hero-desc">Minecraft Developer, JavaScript Developer,<br>Server Owner, UI Designer.</p>
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary">
                             <span>View Projects</span>
@@ -74,27 +74,24 @@
                         </a>
                     </div>
                     <div class="hero-socials">
-                        <a href="https://github.com/BreakTheBean" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
-                        <a href="#" aria-label="Discord"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M19.7 4.5a18.3 18.3 0 00-4.6-1.4.1.1 0 00-.1.1c-.2.4-.4.9-.6 1.3a17 17 0 00-5 0c-.2-.4-.4-.9-.6-1.3a.1.1 0 00-.1-.1 18.3 18.3 0 00-4.6 1.4.1.1 0 000 .1C.8 10 0 15.3 1 20.5a.1.1 0 00.1.1 18 18 0 005.5 1.7.1.1 0 00.1-.1c.4-.6.8-1.2 1.1-1.8a.1.1 0 00-.1-.1 12 12 0 01-1.7-.8.1.1 0 010-.1c.1-.1.2-.2.4-.3a.1.1 0 01.1 0 13 13 0 0010.5 0 .1.1 0 01.1 0c.1.1.2.2.4.3a.1.1 0 010 .1 12 12 0 01-1.7.8.1.1 0 00-.1.1c.3.6.7 1.2 1.1 1.8a.1.1 0 00.1.1 18 18 0 005.5-1.7.1.1 0 00.1-.1c1-5.3.3-10.6-3.2-15.9a.1.1 0 00-.1-.1zM8.5 16.5c-1.2 0-2.2-1.1-2.2-2.5s1-2.5 2.2-2.5 2.2 1.1 2.2 2.5-1 2.5-2.2 2.5zm7 0c-1.2 0-2.2-1.1-2.2-2.5s1-2.5 2.2-2.5 2.2 1.1 2.2 2.5-1 2.5-2.2 2.5z"></path></svg></a>
-                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
-                        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                        <a href="https://github.com/BeanTheLima/" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+                        <a href="https://www.facebook.com/huynh.thin.590936" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
                     </div>
                 </div>
                 <div class="hero-visual reveal fade-left">
                     <div class="avatar-container parallax-element">
                         <div class="avatar-glow"></div>
-                        <img src="assets/avatar.png" alt="BreakTheBean Avatar" class="avatar" id="hero-avatar" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23ffffff\' stroke-width=\'2\'><path d=\'M18 8h1a4 4 0 0 1 0 8h-1\'></path><path d=\'M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z\'></path><line x1=\'6\' y1=\'1\' x2=\'6\' y2=\'4\'></line><line x1=\'10\' y1=\'1\' x2=\'10\' y2=\'4\'></line><line x1=\'14\' y1=\'1\' x2=\'14\' y2=\'4\'></line></svg>'; this.classList.add('fallback-avatar');">
+                        <img src="assets/avatar.png" alt="BreakTheBean" class="avatar" id="hero-avatar" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'%23ffffff\' stroke-width=\'2\'><path d=\'M18 8h1a4 4 0 0 1 0 8h-1\'></path><path d=\'M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z\'></path><line x1=\'6\' y1=\'1\' x2=\'6\' y2=\'4\'></line><line x1=\'10\' y1=\'1\' x2=\'10\' y2=\'4\'></line><line x1=\'14\' y1=\'1\' x2=\'14\' y2=\'4\'></line></svg>'; this.classList.add('fallback-avatar');">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Stats Section -->
         <section class="stats section-padding">
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-card glass reveal fade-up" style="--delay: 0.1s">
-                        <h3 class="stat-number" data-target="100">0</h3><span class="stat-plus">+</span>
+                        <h3 class="stat-number" data-target="20">0</h3><span class="stat-plus">+</span>
                         <p class="stat-label">Projects</p>
                     </div>
                     <div class="stat-card glass reveal fade-up" style="--delay: 0.2s">
@@ -103,7 +100,7 @@
                     </div>
                     <div class="stat-card glass reveal fade-up" style="--delay: 0.3s">
                         <h3 class="stat-number" data-target="10">0</h3><span class="stat-plus">K+</span>
-                        <p class="stat-label">Players</p>
+                        <p class="stat-label">Coffee Cups</p>
                     </div>
                     <div class="stat-card glass reveal fade-up" style="--delay: 0.4s">
                         <h3 class="stat-number string-stat">24/7</h3>
@@ -120,26 +117,12 @@
                     <div class="title-underline"></div>
                 </div>
                 <div class="about-card glass reveal fade-up">
-                    <p class="about-text">
-                        <span class="highlight-text">BreakTheBean</span> là một Developer đam mê tạo ra những sản phẩm đẹp mắt và tối ưu trải nghiệm người dùng, đồng thời là người phát triển các dự án Minecraft Server và Website hiện đại.
-                    </p>
+                    <p class="about-text"><span class="highlight-text">BreakTheBean</span> là một Developer đam mê tạo ra những sản phẩm đẹp mắt và tối ưu trải nghiệm người dùng, đồng thời là người phát triển các dự án Minecraft Server và Website hiện đại.</p>
                     <div class="about-info-grid">
-                        <div class="info-item">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <span>Vietnam</span>
-                        </div>
-                        <div class="info-item">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="info-item">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                            <span>Minecraft</span>
-                        </div>
-                        <div class="info-item">
-                            <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 2.69l5.66 4.12 2.53 6.64-4.5 5.55H8.31l-4.5-5.55 2.53-6.64L12 2.69z"></path></svg>
-                            <span>UI/UX</span>
-                        </div>
+                        <div class="info-item"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Vietnam</span></div>
+                        <div class="info-item"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg><span>JavaScript</span></div>
+                        <div class="info-item"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg><span>Minecraft</span></div>
+                        <div class="info-item"><svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 2.69l5.66 4.12 2.53 6.64-4.5 5.55H8.31l-4.5-5.55 2.53-6.64L12 2.69z"></path></svg><span>UI/UX</span></div>
                     </div>
                 </div>
             </div>
@@ -148,57 +131,53 @@
         <section id="skills" class="skills section-padding">
             <div class="container">
                 <div class="section-header reveal fade-up">
-                    <h2 class="section-title">Skills</h2>
+                    <h2 class="section-title">Skills & AI</h2>
                     <div class="title-underline"></div>
                 </div>
                 <div class="skills-grid">
                     <div class="skill-item glass reveal fade-up" style="--delay: 0.1s">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M2 3h20M2 19h20M2 11h20"></path></svg>
-                        </div>
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M2 3h20M2 19h20M2 11h20"></path></svg></div>
                         <span>HTML</span>
                     </div>
                     <div class="skill-item glass reveal fade-up" style="--delay: 0.2s">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
-                        </div>
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg></div>
                         <span>CSS</span>
                     </div>
                     <div class="skill-item glass reveal fade-up" style="--delay: 0.3s">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
-                        </div>
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></div>
                         <span>JavaScript</span>
                     </div>
                     <div class="skill-item glass reveal fade-up" style="--delay: 0.4s">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                        </div>
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
                         <span>NodeJS</span>
                     </div>
                     <div class="skill-item glass reveal fade-up" style="--delay: 0.5s">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M2 12h4l3-9 5 18 3-9h5"></path></svg>
-                        </div>
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M2 12h4l3-9 5 18 3-9h5"></path></svg></div>
                         <span>Python</span>
                     </div>
                     <div class="skill-item glass reveal fade-up" style="--delay: 0.6s">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
-                        </div>
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg></div>
                         <span>MySQL</span>
                     </div>
                     <div class="skill-item glass reveal fade-up" style="--delay: 0.7s">
-                        <div class="skill-icon">
-                            <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                        </div>
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
                         <span>Linux</span>
                     </div>
                     <div class="skill-item glass reveal fade-up" style="--delay: 0.8s">
-                        <div class="skill-icon">
-                             <svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                        </div>
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
                         <span>Minecraft</span>
+                    </div>
+                    <div class="skill-item glass reveal fade-up" style="--delay: 0.9s">
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg></div>
+                        <span>ChatGPT</span>
+                    </div>
+                    <div class="skill-item glass reveal fade-up" style="--delay: 1.0s">
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"></path></svg></div>
+                        <span>Gemini</span>
+                    </div>
+                    <div class="skill-item glass reveal fade-up" style="--delay: 1.1s">
+                        <div class="skill-icon"><svg viewBox="0 0 24 24" width="32" height="32" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
+                        <span>Claude</span>
                     </div>
                 </div>
             </div>
@@ -213,29 +192,23 @@
                 <div class="projects-grid">
                     <div class="project-card glass reveal fade-up" style="--delay: 0.1s">
                         <div class="project-content">
-                            <div class="project-icon">
-                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                            </div>
+                            <div class="project-icon"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></div>
                             <h3 class="project-title">FairyMC</h3>
-                            <p class="project-desc">A premium Minecraft Server Network with high performance and unique features.</p>
-                            <a href="#" class="btn btn-sm btn-outline">Visit Project <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+                            <p class="project-desc">Admin of a premium Minecraft Server Network with high performance and unique features.</p>
+                            <a href="https://discord.gg/fairymc" target="_blank" class="btn btn-sm btn-outline">Visit Project <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
                         </div>
                     </div>
                     <div class="project-card glass reveal fade-up" style="--delay: 0.2s">
                         <div class="project-content">
-                            <div class="project-icon">
-                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                            </div>
-                            <h3 class="project-title">Minecraft Network</h3>
-                            <p class="project-desc">Scalable proxy and backend infrastructure for optimal player experience.</p>
-                            <a href="#" class="btn btn-sm btn-outline">Visit Project <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
+                            <div class="project-icon"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg></div>
+                            <h3 class="project-title">BM Studio</h3>
+                            <p class="project-desc">Founder of BM Studio. Scalable proxy and backend infrastructure for optimal player experience.</p>
+                            <a href="https://dsc.gg/bmstudio" target="_blank" class="btn btn-sm btn-outline">Visit Project <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
                         </div>
                     </div>
                     <div class="project-card glass reveal fade-up" style="--delay: 0.3s">
                         <div class="project-content">
-                            <div class="project-icon">
-                                <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-                            </div>
+                            <div class="project-icon"><svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></div>
                             <h3 class="project-title">Portfolio</h3>
                             <p class="project-desc">A highly optimized, dark luxury personal portfolio built with Vanilla JS.</p>
                             <a href="#" class="btn btn-sm btn-outline">Visit Project <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2" fill="none"><path d="M5 12h14M12 5l7 7-7 7"></path></svg></a>
@@ -292,19 +265,19 @@
                 </div>
                 <div class="contact-card glass reveal fade-up">
                     <div class="contact-info">
-                        <a href="mailto:huynhthin.dev@gmail.com" class="contact-item">
+                        <button class="contact-item" data-copy="huynhbi035@gmail.com">
                             <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                             <span>Email Me</span>
-                        </a>
-                        <a href="#" class="contact-item">
+                        </button>
+                        <button class="contact-item" data-copy="breakthebean">
                             <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M19.7 4.5a18.3 18.3 0 00-4.6-1.4.1.1 0 00-.1.1c-.2.4-.4.9-.6 1.3a17 17 0 00-5 0c-.2-.4-.4-.9-.6-1.3a.1.1 0 00-.1-.1 18.3 18.3 0 00-4.6 1.4.1.1 0 000 .1C.8 10 0 15.3 1 20.5a.1.1 0 00.1.1 18 18 0 005.5 1.7.1.1 0 00.1-.1c.4-.6.8-1.2 1.1-1.8a.1.1 0 00-.1-.1 12 12 0 01-1.7-.8.1.1 0 010-.1c.1-.1.2-.2.4-.3a.1.1 0 01.1 0 13 13 0 0010.5 0 .1.1 0 01.1 0c.1.1.2.2.4.3a.1.1 0 010 .1 12 12 0 01-1.7.8.1.1 0 00-.1.1c.3.6.7 1.2 1.1 1.8a.1.1 0 00.1.1 18 18 0 005.5-1.7.1.1 0 00.1-.1c1-5.3.3-10.6-3.2-15.9a.1.1 0 00-.1-.1zM8.5 16.5c-1.2 0-2.2-1.1-2.2-2.5s1-2.5 2.2-2.5 2.2 1.1 2.2 2.5-1 2.5-2.2 2.5zm7 0c-1.2 0-2.2-1.1-2.2-2.5s1-2.5 2.2-2.5 2.2 1.1 2.2 2.5-1 2.5-2.2 2.5z"></path></svg>
                             <span>Discord</span>
-                        </a>
-                        <a href="https://github.com/BreakTheBean" class="contact-item">
+                        </button>
+                        <a href="https://github.com/BeanTheLima/" target="_blank" class="contact-item">
                             <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                             <span>Github</span>
                         </a>
-                        <a href="#" class="contact-item">
+                        <a href="https://www.facebook.com/huynh.thin.590936" target="_blank" class="contact-item">
                             <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
                             <span>Facebook</span>
                         </a>
@@ -323,7 +296,7 @@
     <footer>
         <div class="container footer-content">
             <p>&copy; <span id="year"></span> BreakTheBean. All rights reserved.</p>
-            <p class="made-with">Made with <span class="heart">♥</span> and JavaScript</p>
+            <p class="made-with">Made with <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="var(--purple)"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg> and JavaScript</p>
         </div>
     </footer>
 
