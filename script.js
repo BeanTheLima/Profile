@@ -84,15 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const glow = document.getElementById('mouse-glow');
-    window.addEventListener('mousemove', (e) => {
-        if (!ticking) {
+    let mouseTicking = false;
+    document.addEventListener('mousemove', (e) => {
+        if (!mouseTicking) {
             window.requestAnimationFrame(() => {
-                glow.style.left = `${e.clientX}px`;
-                glow.style.top = `${e.clientY}px`;
+                glow.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`;
                 glow.style.opacity = '1';
-                ticking = false;
+                mouseTicking = false;
             });
-            ticking = true;
+            mouseTicking = true;
         }
     });
     document.addEventListener('mouseleave', () => {
